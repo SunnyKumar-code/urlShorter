@@ -5,6 +5,7 @@ import  fs  from "fs";
 
 
 const app = express();
+
 app.use(express.json())
 app.use(express.urlencoded())
 
@@ -15,7 +16,7 @@ app.get("/",(req,res)=>{
 app.post("/long-to-short",(req,res)=>{
     // console.log(req.body.longUrl);
     const uniqueId = nanoid(8)
-    const shortUrl ="https://urlshorter-xfvn.onrender.com"+ uniqueId;
+    const shortUrl ="https://urlshorter-xfvn.onrender.com/"+ uniqueId;
     const fileData =fs.readFileSync("url-data.json")
    const urlObj = JSON.parse(fileData.toString())
 
