@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 app.get("/",(req,res)=>{
-    res.sendFile(import.meta.dirname + "\\index.html")
+    res.sendFile(import.meta.dirname + "index.html")
 })
 
 app.post("/long-to-short",(req,res)=>{
