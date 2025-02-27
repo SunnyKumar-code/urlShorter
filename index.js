@@ -15,7 +15,7 @@ app.get("/",(req,res)=>{
 app.post("/long-to-short",(req,res)=>{
     // console.log(req.body.longUrl);
     const uniqueId = nanoid(8)
-    const shortUrl ="http://localhost:5000/"+ uniqueId;
+    const shortUrl ="https://urlshorter-xfvn.onrender.com"+ uniqueId;
     const fileData =fs.readFileSync("url-data.json")
    const urlObj = JSON.parse(fileData.toString())
 
